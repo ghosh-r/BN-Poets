@@ -5,6 +5,10 @@ from transformers import pipeline
 st.set_page_config(page_title="🖋BN-Poets")
 st.title("Bengali Poets")
 
+st.markdown(
+        """**Bengali-Poets** is an app, developed by [Ritobrata Ghosh](https://ghosh-r.github.io)  where you can generate Bengali poetry using a prompt of your choice. You can either choose a model that writes poetry in the style of [Rabindranath Tagore](https://wikipedia.org/wiki/Rabindranath_Tagore), Asia's first Nobel Laureate in Literature."""
+)
+
 st.sidebar.subheader("Select sequence length of poem.")
 max_len = st.sidebar.slider(
     "Maximum length",
