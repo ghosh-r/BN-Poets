@@ -31,3 +31,23 @@ if st.button("Write a poem"):
 
 
     st.write(output)
+
+st.markdown("""
+### Training Procedure
+
+* First a 117 million parameter GPT-2 model was trained from scratch on TPUv3-8 enabled virtual machines. You can find the model [here](https://huggingface.co/ghosh-r/bangla-gpt2).
+* Next, that model was fine-tuned on Bengali Poems on text-fortmat. The data can be found [here](https://kaggle.com/truthr/https://www.kaggle.com/truthr/free-bengali-poetry).
+* The training Notebook can be found [here](https://colab.research.google.com/drive/1zXpoWWdFoNmMKvlZT1bOboHBY5rWKtuk?usp=sharing).
+
+### References:
+
+* Bangla-GPT2, Ritobrata Ghosh, Hugging Face, 2021
+* Ritobrata Ghosh, “Free Bengali Poetry.” Kaggle, 2021, doi: 10.34740/KAGGLE/DSV/2400728.
+
+### Acknowledgements:
+
+* The **Hugging Face Team** for providing thorough and continuous support during the project.
+* **Google Cloud** for providing the TPUv3 enabled Virtual Machines.
+
+Copyright Ritobrata Ghosh 2021. [GitHub](https://github.com/ghosh-r/BN-Poets)
+        """)
