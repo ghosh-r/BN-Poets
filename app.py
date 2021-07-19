@@ -18,8 +18,10 @@ poet = pipeline('text-generation',
         model='ghosh-r/robi-kobi',
         tokenizer='ghosh-r/bangla-gpt2')
 
+user_input = st.text_input("prompt", value="আমি তোমাকে দেখেছি হৃদয় মাঝে ", help="The AI will generate poetry taking this as the first line")
+
 if st.button("Write a poem"):
-    poem = poet('দরজা ধরে দাঁড়াও তুমি', max_length=max_len)
+    poem = poet(user_input, max_length=max_len)
 
     output = poem[0]['generated_text'].replace('\n', ' ').replace('\xa0', '')
 
